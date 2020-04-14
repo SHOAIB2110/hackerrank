@@ -1,0 +1,9 @@
+if __name__ == '__main__':
+    n = int(input())                   #taking no. of student
+    student_marks = {}                #intialised  the dictionary
+    for _ in range(n):                #taking input of name and marks till range n
+        name, *line = input().split() #name will take the name input and *line will tkae an list a s an input
+        scores = list(map(float, line)) #maping the float function to each element of scorees
+        student_marks[name] = scores    #storing marks in list
+    query_name = input()                #taking input as name of student
+    print('%.2f'%(sum(student_marks[query_name])/len(student_marks[query_name])))#printing the average marks of the student
